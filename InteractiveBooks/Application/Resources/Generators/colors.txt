@@ -1,0 +1,2 @@
+MainColor                       :       #000
+SubColor                        :       #fff
