@@ -10,16 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let mainView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.config()
-    }
-    
-    
-    private func config() {
-        
-        self.view.backgroundColor = .orange
         
         self.tabBarItemConfig()
         
@@ -36,7 +30,7 @@ class ViewController: UIViewController {
         
         //        how to make a icon wihout name and in  center of space
         //        tabBarItem.title = ""
-//                tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: -6, right: 0)
+        //        tabBarItem.imageInsets = UIEdgeInsets(top: 12, left: 0, bottom: -6, right: 0)
         
         
         //        self.tabBarItem = UITabBarItem(title: L10n.Title.main, image: Asset.iconProfile.image, selectedImage: Asset.iconBook.image)
@@ -44,6 +38,9 @@ class ViewController: UIViewController {
         self.tabBarItem = UITabBarItem(title: L10n.Title.main, image: Asset.iconBook.image, tag: 0)
     }
     
+}
+
+extension ViewController:  UICollectionViewDelegate {
     
 }
 

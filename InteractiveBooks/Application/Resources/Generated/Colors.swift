@@ -19,12 +19,15 @@ internal struct ColorName {
   internal let rgbaValue: UInt32
   internal var color: Color { return Color(named: self) }
 
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#000000"></span>
-  /// Alpha: 0% <br/> (0x00000000)
-  internal static let mainColor = ColorName(rgbaValue: 0x00000000)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#00000f"></span>
-  /// Alpha: 100% <br/> (0x00000fff)
-  internal static let subColor = ColorName(rgbaValue: 0x00000fff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#fff4f3"></span>
+  /// Alpha: 100% <br/> (0xfff4f3ff)
+  internal static let backgroudMyBookFirstScreen = ColorName(rgbaValue: 0xfff4f3ff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#fef4df"></span>
+  /// Alpha: 100% <br/> (0xfef4dfff)
+  internal static let backgroudMyBookSecoundScreen = ColorName(rgbaValue: 0xfef4dfff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#10205a"></span>
+  /// Alpha: 100% <br/> (0x10205aff)
+  internal static let backgroudMyBookThirdScreen = ColorName(rgbaValue: 0x10205aff)
 }
 // swiftlint:enable identifier_name line_length type_body_length
 

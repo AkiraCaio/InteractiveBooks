@@ -1,2 +1,3 @@
-MainColor                       :       #000
-SubColor                        :       #fff
+backgroud-myBook-first-screen               :       #FFF4F3
+backgroud-myBook-secound-screen             :       #FEF4DF
+backgroud-myBook-third-screen               :       #10205A
