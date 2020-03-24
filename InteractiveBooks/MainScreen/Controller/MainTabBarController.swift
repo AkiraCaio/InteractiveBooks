@@ -28,6 +28,9 @@ class MainTabBarController: UITabBarController {
         //After update in the height of tabBar can config the ViewController Screen
         let vc = self.viewControllers![0] as! ViewController
         vc.configScreen()
+        
+        tabBarHeightAdjustable = true
+
     }
     
     private func config() {
@@ -43,7 +46,7 @@ class MainTabBarController: UITabBarController {
         //Color of background
         self.tabBar.barTintColor = .white
         
-        //        //Remove the top border from tabBar
+        //Remove the top border from tabBar
         self.tabBar.layer.borderWidth = 0
         //        self.tabBar.clipsToBounds = true
         
@@ -71,11 +74,20 @@ class MainTabBarController: UITabBarController {
         
         // OR
         
-        self.tabBar.layer.masksToBounds = true
-        self.tabBar.isTranslucent = true
-        self.tabBar.barStyle = .blackOpaque
-        self.tabBar.layer.cornerRadius = 25
-        self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+//        self.tabBar.layer.masksToBounds = true
+//        self.tabBar.isTranslucent = true
+//        self.tabBar.barStyle = .blackOpaque
+//        self.tabBar.layer.cornerRadius = 25
+//        self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        
+        
+//
+        self.tabBar.layer.shadowColor = UIColor(red: 0.25, green: 0.29, blue: 0.36, alpha: 0.1).cgColor
+        self.tabBar.layer.shadowOffset = CGSize(width: 0, height: 4)
+        self.tabBar.layer.masksToBounds = false
+        self.tabBar.layer.shadowRadius = 8
+        self.tabBar.layer.shadowOpacity = 1
+        self.tabBar.layer.cornerRadius = 20
         
     }
     
@@ -97,7 +109,9 @@ class MainTabBarController: UITabBarController {
 
 extension MainTabBarController: UITabBarControllerDelegate {
     //    Check if viewController is called
-    //    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-    //        return true;
-    //    }
+//        func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+//            
+//                       
+//            return false;
+//        }
 }

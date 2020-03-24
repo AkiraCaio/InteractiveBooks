@@ -10,13 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
     let mainView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    
+    let startButton: UIButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tabBarItemConfig()
         
+        if(tabBarHeightAdjustable){
+            self.configScreen()
+        }
+       
     }
     
     private func tabBarItemConfig() {

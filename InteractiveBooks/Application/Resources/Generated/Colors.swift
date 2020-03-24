@@ -28,6 +28,9 @@ internal struct ColorName {
   /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#10205a"></span>
   /// Alpha: 100% <br/> (0x10205aff)
   internal static let backgroudMyBookThirdScreen = ColorName(rgbaValue: 0x10205aff)
+  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ff8383"></span>
+  /// Alpha: 100% <br/> (0xff8383ff)
+  internal static let backgroudStartButton = ColorName(rgbaValue: 0xff8383ff)
 }
 // swiftlint:enable identifier_name line_length type_body_length
 

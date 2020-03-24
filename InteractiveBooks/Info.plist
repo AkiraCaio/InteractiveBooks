@@ -56,5 +56,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Metropolis-Black.otf</string>
+		<string>Metropolis-Regular.otf</string>
+		<string>Metropolis-Bold.otf</string>
+		<string>Metropolis-SemiBold.otf</string>
+	</array>
 </dict>
 </plist>

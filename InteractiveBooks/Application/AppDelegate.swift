@@ -8,6 +8,8 @@
 
 import UIKit
 
+var tabBarHeightAdjustable: Bool = false
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
