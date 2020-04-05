@@ -15,8 +15,10 @@ extension ViewController{
         self.view.backgroundColor = ColorName.backgroudMyBookFirstScreen.color
         
         self.configMainView()
+        
         self.configButtonAction()
         
+        self.testConfigCustomPageController()
     }
     
     fileprivate func configMainView() {
@@ -35,6 +37,9 @@ extension ViewController{
     }
     
     fileprivate func configButtonAction() {
+        
+        self.startButton.addTarget(self, action: #selector(ViewController.startButtonAction), for: .touchDown)
+        
         self.startButton.translatesAutoresizingMaskIntoConstraints = false
         
         self.startButton.backgroundColor = ColorName.backgroudStartButton.color
@@ -61,5 +66,21 @@ extension ViewController{
             self.startButton.heightAnchor.constraint(equalToConstant: 40)
             
         ])
+    }
+    
+    fileprivate func testConfigCustomPageController() {
+        self.customPageControl.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(self.customPageControl)
+        
+        NSLayoutConstraint.activate([
+            self.customPageControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            self.customPageControl.widthAnchor.constraint(equalToConstant: 90),
+            self.customPageControl.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 60),
+            self.customPageControl.heightAnchor.constraint(equalToConstant: 12)
+        ])
+        
+        self.customPageControl.configScreen()
+        
     }
 }

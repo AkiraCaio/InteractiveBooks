@@ -28,6 +28,8 @@
 		A33DEB5B242A430C00CE3C5A /* Metropolis-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A33DEB48242A430C00CE3C5A /* Metropolis-Black.otf */; };
 		A33DEB5C242A430C00CE3C5A /* Metropolis-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A33DEB49242A430C00CE3C5A /* Metropolis-ExtraBoldItalic.otf */; };
 		A33DEB5D242A430C00CE3C5A /* Metropolis-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A33DEB4A242A430C00CE3C5A /* Metropolis-SemiBoldItalic.otf */; };
+		A347BEA0242BE3090037AC32 /* CustomPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A347BE9F242BE3090037AC32 /* CustomPageController.swift */; };
+		A347BEA2242BE5630037AC32 /* ViewCustomPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A347BEA1242BE5630037AC32 /* ViewCustomPageController.swift */; };
 		A359C8B8241585490067ECAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359C8B7241585490067ECAF /* AppDelegate.swift */; };
 		A359C8BA241585490067ECAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359C8B9241585490067ECAF /* SceneDelegate.swift */; };
 		A359C8BC241585490067ECAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A359C8BB241585490067ECAF /* ViewController.swift */; };
@@ -63,6 +65,8 @@
 		A33DEB48242A430C00CE3C5A /* Metropolis-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metropolis-Black.otf"; path = "metropolis/Metropolis-Black.otf"; sourceTree = "<group>"; };
 		A33DEB49242A430C00CE3C5A /* Metropolis-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metropolis-ExtraBoldItalic.otf"; path = "metropolis/Metropolis-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
 		A33DEB4A242A430C00CE3C5A /* Metropolis-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Metropolis-SemiBoldItalic.otf"; path = "metropolis/Metropolis-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		A347BE9F242BE3090037AC32 /* CustomPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageController.swift; sourceTree = "<group>"; };
+		A347BEA1242BE5630037AC32 /* ViewCustomPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCustomPageController.swift; sourceTree = "<group>"; };
 		A359C8B4241585490067ECAF /* InteractiveBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A359C8B7241585490067ECAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A359C8B9241585490067ECAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +154,31 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		A347BE9C242BE2B40037AC32 /* CustomPageControll */ = {
+			isa = PBXGroup;
+			children = (
+				A347BE9D242BE2C70037AC32 /* View */,
+				A347BE9E242BE2CE0037AC32 /* Controller */,
+			);
+			path = CustomPageControll;
+			sourceTree = "<group>";
+		};
+		A347BE9D242BE2C70037AC32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A347BEA1242BE5630037AC32 /* ViewCustomPageController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A347BE9E242BE2CE0037AC32 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A347BE9F242BE3090037AC32 /* CustomPageController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		A359C8AB241585490067ECAF = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +203,7 @@
 				A3BF228324158737006529A7 /* Application */,
 				A3BF228424158744006529A7 /* Base */,
 				A3679B81242688B000E95AEA /* MainScreen */,
+				A347BE9C242BE2B40037AC32 /* CustomPageControll */,
 				A359C8C52415854A0067ECAF /* Info.plist */,
 			);
 			path = InteractiveBooks;
@@ -384,7 +414,9 @@
 			files = (
 				A359C8BC241585490067ECAF /* ViewController.swift in Sources */,
 				A38E5C5A2415FF6300CCF5B8 /* Colors.swift in Sources */,
+				A347BEA2242BE5630037AC32 /* ViewCustomPageController.swift in Sources */,
 				A359C8B8241585490067ECAF /* AppDelegate.swift in Sources */,
+				A347BEA0242BE3090037AC32 /* CustomPageController.swift in Sources */,
 				A306BEB02416D7E600CF38D3 /* MainTabBarController.swift in Sources */,
 				A38E5C582415902100CCF5B8 /* Assets.swift in Sources */,
 				A3679B83242688EA00E95AEA /* ViewViewController.swift in Sources */,
