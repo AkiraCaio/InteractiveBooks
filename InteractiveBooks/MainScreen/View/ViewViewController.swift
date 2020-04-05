@@ -18,7 +18,7 @@ extension ViewController{
         
         self.configButtonAction()
         
-        self.testConfigCustomPageController()
+        self.configCustomPage()
     }
     
     fileprivate func configMainView() {
@@ -68,7 +68,7 @@ extension ViewController{
         ])
     }
     
-    fileprivate func testConfigCustomPageController() {
+    fileprivate func configCustomPage() {
         self.customPageControl.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(self.customPageControl)

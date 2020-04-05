@@ -17,19 +17,21 @@ extension CustomPageControoller {
     func updateCurrentDot(indexCurrentDot: Int, indexOldDot: Int) {
         
         let oldView = self.subviews[indexOldDot]
-        
-        oldView.layer.cornerRadius = self.sizePageDot / 2
-        
-        self.constraintsHeight[indexOldDot].constant = self.sizePageDot
-        self.constraintsWidht[indexOldDot].constant = self.sizePageDot
-
         let currentView = self.subviews[indexCurrentDot]
         
-        currentView.layer.cornerRadius = self.sizeCurrentPageDot / 2
+        UIView.animate(withDuration: 0.2) {
+            
+            oldView.layer.cornerRadius = self.sizePageDot / 2
+            self.constraintsHeight[indexOldDot].constant = self.sizePageDot
+            self.constraintsWidht[indexOldDot].constant = self.sizePageDot
+            
+            currentView.layer.cornerRadius = self.sizeCurrentPageDot / 2
+            self.constraintsHeight[indexCurrentDot].constant = self.sizeCurrentPageDot
+            self.constraintsWidht[indexCurrentDot].constant = self.sizeCurrentPageDot
+            
+            self.layoutSubviews()
+        }
         
-        self.constraintsHeight[indexCurrentDot].constant = self.sizeCurrentPageDot
-        self.constraintsWidht[indexCurrentDot].constant = self.sizeCurrentPageDot
-
     }
     
     fileprivate func configMainView() {

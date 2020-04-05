@@ -19,7 +19,7 @@ class CustomPageControoller: UIView {
     
     var spacaing: CGFloat = 15
     
-    var oldCurrentPage: Int = 0
+    private var oldCurrentPage: Int = 0
     var currentPage: Int = 0 {
         didSet {
             self.updateCurrentDot(indexCurrentDot: self.currentPage, indexOldDot: self.oldCurrentPage)
