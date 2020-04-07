@@ -29,9 +29,16 @@ class CustomPageControoller: UIView {
     
     var numberOfPages: Int = 5
     
-    var pageColor: UIColor = UIColor.black
-    var currentPageColor: UIColor = UIColor.black
-    
+    var pageColor: UIColor = UIColor.black {
+        didSet {
+            self.updateColor()
+        }
+    }
+    var currentPageColor: UIColor = UIColor.black {
+        didSet {
+            self.updateColor()
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

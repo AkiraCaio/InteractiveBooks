@@ -14,6 +14,16 @@ extension CustomPageControoller {
         configMainView()
     }
     
+    func updateColor(){
+        for index in 0..<self.subviews.count {
+            if(index == self.currentPage) {
+                self.subviews[index].backgroundColor = self.currentPageColor
+            }else{
+                self.subviews[index].backgroundColor = self.pageColor
+            }
+        }
+    }
+    
     func updateCurrentDot(indexCurrentDot: Int, indexOldDot: Int) {
         
         let oldView = self.subviews[indexOldDot]

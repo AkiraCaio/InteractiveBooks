@@ -19,21 +19,29 @@ extension ViewController{
         self.configButtonAction()
         
         self.configCustomPage()
+        
+        self.configDifficultyView()
     }
     
     fileprivate func configMainView() {
         self.mainView.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.mainView.backgroundColor = ColorName.backgroudMyBookFirstScreen.color
-        
+                
         self.view.addSubview(self.mainView)
         
         NSLayoutConstraint.activate([
             self.mainView.topAnchor.constraint(equalTo: self.view.topAnchor),
             self.mainView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
             self.mainView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            self.mainView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -self.tabBarController!.tabBar.frame.size.height),
+            self.mainView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
         ])
+        
+        self.mainView.delegate = self
+        self.mainView.dataSource = self
+        
+        self.mainView.register(CustomCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        
+        self.mainView.showsHorizontalScrollIndicator = false
+        
     }
     
     fileprivate func configButtonAction() {
@@ -81,6 +89,47 @@ extension ViewController{
         ])
         
         self.customPageControl.configScreen()
+        
+    }
+    
+    fileprivate func configDifficultyView() {
+                
+        self.difficultyView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(self.difficultyView)
+        NSLayoutConstraint.activate([
+            self.difficultyView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 100),
+            self.difficultyView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -100),
+            self.difficultyView.bottomAnchor.constraint(equalTo: self.startButton.topAnchor, constant: -140)
+        ])
+        
+        self.difficultyViewLabel.text = L10n.ProgressBar.title
+        self.difficultyViewLabel.font = UIFont(name: "Metropolis-SemiBold", size: 14)
+        self.difficultyViewLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.difficultyView.addSubview(self.difficultyViewLabel)
+        NSLayoutConstraint.activate([
+            self.difficultyViewLabel.leftAnchor.constraint(equalTo: self.difficultyView.leftAnchor, constant: 4),
+            self.difficultyViewLabel.centerYAnchor.constraint(equalTo: self.difficultyView.centerYAnchor)
+        ])
+        
+        self.difficultyViewProgressView.setProgress(0.5, animated: true)
+        
+        self.difficultyViewProgressView.trackTintColor = .white
+        self.difficultyViewProgressView.tintColor = .black
+        
+        self.difficultyViewProgressView.layer.cornerRadius = 4
+        self.difficultyViewProgressView.clipsToBounds = true
+        
+        self.difficultyViewProgressView.layer.borderWidth = 2
+
+        
+        self.difficultyViewProgressView.translatesAutoresizingMaskIntoConstraints = false
+        self.difficultyView.addSubview(self.difficultyViewProgressView)
+        NSLayoutConstraint.activate([
+            self.difficultyViewProgressView.rightAnchor.constraint(equalTo: self.difficultyView.rightAnchor),
+            self.difficultyViewProgressView.leftAnchor.constraint(equalTo: self.difficultyViewLabel.rightAnchor, constant: 8),
+            self.difficultyViewProgressView.centerYAnchor.constraint(equalTo: self.difficultyView.centerYAnchor),
+            self.difficultyViewProgressView.heightAnchor.constraint(equalToConstant: 8)
+        ])
         
     }
 }
