@@ -17,6 +17,20 @@ internal enum L10n {
     internal static let title = L10n.tr("Localizable", "button.title")
   }
 
+  internal enum ExplanationText {
+    /// Explore the exciting natural world around us. This is your very own nature scrapbook, packed with fascinating facts and brilliant activities. Doodle, draw and colour and find out how plants grow as well as the different parts of plants, seeds, and flowers.
+    internal static let firstScreen = L10n.tr("Localizable", "explanationText.firstScreen")
+    /// Diagrams, cross sections, and illustrations get kids up close and personal with glossy red peppers, plump orange pumpkins, little peas, and dozens of other vegetables; Learn about color, climatic region in which the plants grow, and their uses.
+    internal static let secondScreen = L10n.tr("Localizable", "explanationText.secondScreen")
+    /// Discover the amazing world of outer space as you scratch pictures of planets, comets, and spacecraft to reveal glittery, swirly, and even glow-in-the-dark colors beneath. Ask questions, seek answers and explore the natural world.
+    internal static let thirdScreen = L10n.tr("Localizable", "explanationText.thirdScreen")
+  }
+
+  internal enum ProgressBar {
+    /// Difficulty
+    internal static let title = L10n.tr("Localizable", "progressBar.title")
+  }
+
   internal enum Title {
     /// My books
     internal static let main = L10n.tr("Localizable", "title.main")
