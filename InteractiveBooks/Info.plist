@@ -58,6 +58,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>AbhayaLibre-Regular.ttf</string>
 		<string>Metropolis-Black.otf</string>
 		<string>Metropolis-Regular.otf</string>
 		<string>Metropolis-Bold.otf</string>
