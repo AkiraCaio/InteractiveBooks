@@ -88,7 +88,9 @@ extension ViewController{
             self.customPageControl.heightAnchor.constraint(equalToConstant: 12)
         ])
         
-        self.customPageControl.configScreen()
+        if (self.customPageControl.subviews.isEmpty) {
+            self.customPageControl.configScreen()
+        }
         
     }
     

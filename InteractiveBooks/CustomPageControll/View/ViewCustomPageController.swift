@@ -14,36 +14,6 @@ extension CustomPageControoller {
         configMainView()
     }
     
-    func updateColor(){
-        for index in 0..<self.subviews.count {
-            if(index == self.currentPage) {
-                self.subviews[index].backgroundColor = self.currentPageColor
-            }else{
-                self.subviews[index].backgroundColor = self.pageColor
-            }
-        }
-    }
-    
-    func updateCurrentDot(indexCurrentDot: Int, indexOldDot: Int) {
-        
-        let oldView = self.subviews[indexOldDot]
-        let currentView = self.subviews[indexCurrentDot]
-        
-        UIView.animate(withDuration: 0.2) {
-            
-            oldView.layer.cornerRadius = self.sizePageDot / 2
-            self.constraintsHeight[indexOldDot].constant = self.sizePageDot
-            self.constraintsWidht[indexOldDot].constant = self.sizePageDot
-            
-            currentView.layer.cornerRadius = self.sizeCurrentPageDot / 2
-            self.constraintsHeight[indexCurrentDot].constant = self.sizeCurrentPageDot
-            self.constraintsWidht[indexCurrentDot].constant = self.sizeCurrentPageDot
-            
-            self.layoutSubviews()
-        }
-        
-    }
-    
     fileprivate func configMainView() {
         
         self.backgroundColor = .clear
@@ -63,7 +33,7 @@ extension CustomPageControoller {
         let view = UIView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         
-        self.insertSubview(view, at: index)
+        self.addSubview(view)
         
         view.backgroundColor = self.currentPageColor
         
@@ -90,7 +60,6 @@ extension CustomPageControoller {
             ])
     
         }
-        
     }
     
     fileprivate func configMainViewDot(index: Int) {
@@ -98,7 +67,7 @@ extension CustomPageControoller {
         let view = UIView(frame: .zero)
         view.translatesAutoresizingMaskIntoConstraints = false
         
-        self.insertSubview(view, at: index)
+        self.addSubview(view)
         
         view.backgroundColor = self.pageColor
         
